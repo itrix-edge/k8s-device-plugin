@@ -7,9 +7,9 @@ Allows k8s-k8s-device-plugin on arm64 architecture to allocate  NVIDIA GPUs reso
 docker build -t kevin7674/k8s-device-plugin:1.11 .
 ```
 #### deploy k8s-device-plugin
-
+```
 kubectl create -f k8s-device-plugin/k8s/k8s-device-plugin.yml
-
+```
 #### Allocate gpus by k8s yaml
 ```
     resources:
