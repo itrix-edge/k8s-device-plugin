@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: semaphore-device-plugin-daemonset
+spec:
+  containers:
+  - image: kevin7674/semaphore-device-plugin:1.11
+    name: semaphore-device-plugin-ctr
+    imagePullPolicy: Always
+    command:
+    - semaphore-device-plugin
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100Mi
+      requests:
+        cpu: 50m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop: ["ALL"]
+    volumeMounts:
+      - name: device-plugin
+        mountPath: /var/lib/kubelet/device-plugins
+  volumes:
+    - name: device-plugin
+      hostPath:
+        path: /var/lib/kubelet/device-plugins
