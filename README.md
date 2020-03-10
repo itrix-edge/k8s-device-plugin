@@ -2,7 +2,9 @@
 
 Allows k8s-k8s-device-plugin on arm64 architecture to allocate  NVIDIA GPUs resources.
 
-allocate gpus by k8s yaml
+
+
+#### Allocate gpus by k8s yaml
 ```
     resources:
       limits:
