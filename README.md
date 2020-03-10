@@ -2,6 +2,8 @@
 
 Allows k8s-k8s-device-plugin on arm64 architecture to allocate  NVIDIA GPUs resources.
 
+Please make sure the system has cuda for arm64, k8s-device-plugin use cuda_runtime_API to get gpu device counts.
+
 #### Build docker image
 ```
 docker build -t kevin7674/k8s-device-plugin:1.11 .
