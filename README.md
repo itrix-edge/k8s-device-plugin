@@ -12,7 +12,7 @@ docker build -t kevin7674/k8s-device-plugin:1.11 .
 ```
 kubectl create -f k8s-device-plugin/k8s/k8s-device-plugin.yml
 ```
-#### Allocate gpus when create a k8s yaml
+#### Allocate gpus when create a k8s pod yaml
 ```
     resources:
       limits:
