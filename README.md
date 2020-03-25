@@ -18,3 +18,12 @@ kubectl create -f k8s-device-plugin/k8s/k8s-device-plugin.yml
       limits:
         nvidia.com/gpu: 1
 ```
+#### Device query
+
+https://github.com/NVIDIA/nvidia-docker/wiki/NVIDIA-Container-Runtime-on-Jetson
+
+
+
+
+
+
